@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<title> Hrvatski nogometni klub Velika Gorica</title>
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Službene web stranice Hrvatskog nogometnog kluba Velika Gorica">
+		<meta name="keywords" content="nogometni klub, velika gorica, nogomet, ">
+		<meta name="author" content="ldebebija@hotmail.com">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- favicon meta -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+
+		<!-- css -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+
+		<!-- javascript -->
+		<script type="text/javascript" src="script.js">
+		
+		</script>
+		<header>
+					<div class="logo">
+					<a href="index.html"> <img src="slike/grb.jpg" alt="grb kluba">
+					</a>
+					</div>
+					<div class="navigation">
+					  	<a href="index.html">Naslovna</a>
+					  	<a href="news.html">Aktualnosti</a>
+					  	<div class="dropdown">
+					  		<button class="dropbutton">Navijači</button>
+					  			<div class="dropdown-content">
+					  				<a href="tickets.html">Godišnje ulaznice</a>
+					  				<a href="tickets1.html">Opća pravila o prodaji ulaznice</a>
+								</div>
+					  	</div>
+					  	<div class="dropdown">
+					  		<button class="dropbutton">Multimedija</button>
+					  			<div class="dropdown-content">
+					  				<a href="photos.html">Fotografije</a>
+					  				<a href="videos.html">Video</a>
+								</div>
+					  	</div>
+					  	<a href="contacts.html">Kontakt</a>
+					</div>
+		</header>
+
+			<main>
+				<main>
+				<a href="photos.html"><h1>Galerija</h1></a>
+				<div class="gallery2">
+				 <img src="slike/zene/kadetkinje.jpg" alt="kadetkinje" id="gallery">
+
+					<ul>
+						<li class="button active">01</li>
+						<li class="button">02</li>
+					</ul>
+
+				</div>
+				<h3>Ženske selekcije HNK Gorice</h3>
+				
+
+
+			</main>
+			<footer>
+				<br>
+				<a href="https://www.instagram.com/hnk_gorica/">
+					<img src="slike/face.png">
+				</a>
+				<a href="https://www.instagram.com/hnk_gorica/">
+					<img src="slike/insta.png">
+				</a>
+				<p>Copyright &copy; HNK GORICA</p>
+			</footer>
+			
+			<script>
+				let btn = document.getElementsByClassName("button");
+				let gallery = document.getElementById("gallery");
+
+				let images = new Array(
+						"slike/zene/kadetkinje.jpg",
+						"slike/zene/pionirke.jpg",
+					);
+
+
+				for(let i=0; i<btn.length; i++){
+
+					btn[i].onclick = function(){
+
+						gallery.src = images[i];
+						let current = document.getElementsByClassName("active");
+						current[0].className = current[0].className.replace("active", "");
+						this.className += " active";
+					};
+				}
+			</script>
+
+	</body>
+</html>
